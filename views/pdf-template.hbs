@@ -1,0 +1,30 @@
+{{#each topics}}
+  {{#if (if_eq @index 8)}}
+    <div class="topic">
+      <h2>VISTORIA DA EDIFICAÇÃO</h2>
+      <p>Nome: {{ ../property.name }}</p>
+      <p>Description: {{ ../property.description }}</p>
+      <p>Address: {{ ../property.location.address.formattedAddress }}</p>
+      {{#each ../property.rooms }}
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+        {{#each photos }}
+          <p>Foto {{number}}</p>
+          <img src="{{fileUrl}}" alt="{{originalName}}" />
+          <p>Descrição: {{caption}}</p>
+        {{/each}}
+      {{/each}}
+    </div>
+  {{else}}
+  
+  <div class="topic">
+    <h2>{{name}}</h2>
+    {{{text}}}
+    {{#each attachments}}
+      <p>Imagem {{@index}}. {{description}}</p>
+      <img src="{{url}}" alt="{{name}}" />
+    {{/each}}
+  </div>
+  
+  {{/if}}
+{{/each}}

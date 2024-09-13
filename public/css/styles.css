@@ -1,0 +1,26 @@
+@page topic {
+  size: a4 portrait;
+  @top-center {
+    content: "Topic";
+  }
+}
+
+@media print {
+  .topic {
+    page: topic;
+    border: rgb(99, 71, 255) 2px solid;
+    border: none;
+    break-after: page;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  gap: unset;
+  font-family: Arial, sans-serif;
+  background-image: url("./timbre.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
