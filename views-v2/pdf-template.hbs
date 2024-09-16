@@ -1,0 +1,39 @@
+<ol>
+  {{#each topics}}
+    <div class="topic">
+      {{#if (if_eq name "VISTORIA DA EDIFICAÇÃO")}}
+        <li class="topic-title">{{name}}</li>
+        <div>{{description}}</div>
+        <ol>
+          {{#each rooms}}
+            <li class="sub-topic-title" type="I">{{name}}</li>
+            <div>{{description}}</div>
+            {{#each photos}}
+              <div class="photo-frame">
+                <p>{{title}}</p>
+                <div class="photo-file">
+                  {{#each files}}
+                  <figure>
+                    <img src="{{{fileUrl}}}" alt="{{originalName}}" />
+                  </figure>
+                  {{/each}}
+                </div>
+                <div class="photo-description">
+                  <p>Descrição</p>
+                  <ul>
+                    {{#each description}}
+                      <li>{{.}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            {{/each}}
+          {{/each}}
+        </ol>
+      {{else}}
+        <li class="topic-title">{{name}}</li>
+        <div>{{{text}}}</div>
+      {{/if}}
+    </div>
+  {{/each}}
+</ol>

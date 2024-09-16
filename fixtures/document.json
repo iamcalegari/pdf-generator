@@ -1,0 +1,170 @@
+{
+  "_id": "66e86e96697d53b2137d077d",
+  "isFavorite": false,
+  "insertedAt": "2024-09-16T17:44:54.144Z",
+  "name": "Document 01",
+  "description": "Document 01 description",
+  "user": "66e86e96697d53b2137d0774",
+  "propertyDetails": {
+    "description": "John Doe's main house",
+    "location": {
+      "lat": 37.4224764,
+      "lng": -122.0842499,
+      "address": {
+        "number": "1600",
+        "street": "Amphitheatre Parkway",
+        "city": "Mountain View",
+        "state": "CA",
+        "country": "US",
+        "zip": "94043"
+      },
+      "formattedAddress": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+      "types": ["street_address"]
+    },
+    "name": "John Doe's house",
+    "type": "house"
+  },
+  "roomsDetails": [
+    {
+      "_id": "66e86e96697d53b2137d0775",
+      "insertedAt": "2024-09-16T17:44:52.010Z",
+      "name": "Vistoria da Fachada Lateral Esquerda",
+      "description": "A fachada lateral esquerda que é visualizada pela área de laser, tem uma grande área de anomalia de desplacamento cerâmico nas quinas inclinadas de pastilha marrom, indicadas como pano 01 e 20, conforme exposto na foto 01.",
+      "photos": [
+        {
+          "title": "Foto 01",
+          "number": 0,
+          "description": [
+            "Fachada Lateral Esquerda da edificação, com destaque para área com maior manifestação de desplacamento cerâmico."
+          ],
+          "files": [
+            {
+              "name": "ef5986575514ec05f767b2c23862a608288a3af9757d8c6993176f9799212f96",
+              "number": "01",
+              "caption": "Room 1 photo",
+              "fileUrl": "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg",
+              "originalName": "file-01.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "66e86e96697d53b2137d0776",
+      "insertedAt": "2024-09-16T17:44:52.010Z",
+      "name": "Vistoria da Fachada Frente",
+      "description": "Na fachada frente também há uma grande área de anomalia desplacamento cerâmico na pastilha marrom, principalmente nos panos 02 e 04",
+      "photos": [
+        {
+          "title": "Photos 02-03",
+          "number": 1,
+          "description": [
+            "Anomalia de corrosão na armadura ocasionando exposição do aço",
+            "Cobrimento da armadura, 1,5 cm, em desacordo com recomendações da NBR 6118:2014"
+          ],
+          "files": [
+            {
+              "name": "495bf2ee73f7fafaa2bc067cd8035c6e020595d9a73174359848a1928b6e900e",
+              "number": "02",
+              "caption": "Room 2.1 photo",
+              "fileUrl": "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg",
+              "originalName": "file-02.jpg"
+            },
+            {
+              "name": "9325d1cd1004ede8330e66420002b96474768c0a14177bf089678e29f4ffab6b",
+              "number": "03",
+              "caption": "Room 2.2 photo",
+              "fileUrl": "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg",
+              "originalName": "file-03.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "66e86e96697d53b2137d0777",
+      "insertedAt": "2024-09-16T17:44:52.010Z",
+      "name": "Vistoria da fachada da lateral direita",
+      "description": [],
+      "photos": [
+        {
+          "title": "Photo 04",
+          "number": 2,
+          "description": "Room 3.1 photo",
+          "files": [
+            {
+              "name": "953d563afff5dd50f1227492848d796717c2ea0445aad910faa249ef7a0b4711",
+              "number": "04",
+              "caption": "Room 3.1.1 photo",
+              "fileUrl": "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg",
+              "originalName": "file-04.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Photo 05",
+          "number": 3,
+          "description": "Room 3.2 photo",
+          "files": [
+            {
+              "name": "bce8c784e10d7227bf8aa6b9efecc2d802c5266797d64c1c4ade90619c8ff216",
+              "number": "05",
+              "caption": "Room 3.2.1 photo",
+              "fileUrl": "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg",
+              "originalName": "file-05.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "topicsDetails": [
+    {
+      "_id": "66e86e96697d53b2137d0779",
+      "isNewPage": false,
+      "isRequired": false,
+      "insertedAt": "2024-09-16T17:44:54.135Z",
+      "name": "INTRODUÇÃO",
+      "template": "{{{text}}}",
+      "data": {
+        "text": "A inspeção de fachada caracteriza-se como uma vistoria para avaliar as manifestações patológicas de uma edificação, onde será rotulado o desempenho, vida útil, segurança, estado de conservação, manutenção, exposição ambiental, utilização e operação, visando orientar os usuários quanto à necessidade de melhorias dos elementos construtivos. (NEVES, 2009).<br/><br/>O conceito de preservação, uso, manutenção e desempenho do espaço físico de maior relevância na vida do homem, tanto pelo aspecto patrimonial quanto pelas questões relacionadas à segurança e ao conforto se adquirem pela observação permanente das edificações. (IBAPE - Instituto Brasileiro de Avaliação e Perícias de Engenharia do estado de São Paulo – “Norma de Inspeção Predial Nacional”, 2012).<br/><br/>As anomalias ou falhas constatadas no edifício fazem escopo da inspeção predial que o classifica de acordo com o grau de risco apresentado, fornecendo ao usuário uma análise isolada ou combinada das condições técnicas, de uso e de manutenção da edificação. Esta análise possibilita um planejamento de todos os gastos, a racionalização dos serviços a serem realizados e uma ordem cronológica em que estes serviços deverão ser executados. (NEVES, 2009).<br/><br/>As não conformidades causadas pelas anomalias e falhas impactam na perda precoce de desempenho real ou futuro dos elementos construtivos e na redução do tempo de vida útil projetada. Podem comprometer também a segurança, funcionalidade, operabilidade, saúde de usuários, conforto térmico, acústico e lumínico, acessibilidade, durabilidade, vida útil, dentre outros parâmetros de desempenho definidos na ABNT NBR 15575. (IBAPE - Instituto Brasileiro de Avaliação e Perícias de Engenharia do estado de São Paulo – “Norma de Inspeção Predial Nacional”, 2012).<br/><br/>Os reiterados acidentes prediais ocorridos recentemente no Brasil, motivados por anomalias e falhas, quer de projetos, quer construtivas ou de manutenção, indicam a necessidade de maior conscientização dos usuários das edificações com os cuidados técnicos indispensáveis à boa segurança e uso de nossas edificações. (GOMIDE, 2006)."
+      }
+    },
+    {
+      "_id": "66e86e96697d53b2137d077a",
+      "isNewPage": false,
+      "isRequired": false,
+      "insertedAt": "2024-09-16T17:44:54.135Z",
+      "name": "CONSIDERAÇÕES INICIAIS",
+      "template": "O presente laudo {{ nome_do_laudo }} foi solicitado pelo {{ nome_do_solicitante }}, situada na {{ endereço_do_solicitante }}, localizado na cidade de {{ cidade_do_solicitante }}, inscrito no CPNJ de número {{ cnpj_do_solicitante }}. Elaborado pela empresa {{ nome_da_empresa }}, pessoa jurídica de direito privado, CNPJ {{ cnpj_da_empresa }}, com endereço na {{ endereço_da_empresa }}, situado na cidade de {{ cidade_da_empresa }}, neste ato representada pela {{ título_da_representada }} {{ nome_da_representada }}, inscrita no CPF nº {{ cpf_da_representada }}, com o intuito de {{ intuito }}, justificando a ocorrência das manifestações patológicas apresentadas na vistoria realizada in loco nos meses de {{ período_da_vistoria }}, em obediência às diretrizes atribuídas pelas Normas Técnicas Brasileiras aprovadas e regulamentadas pela Associação Brasileira de Normas Técnicas – ABNT, sendo imprescindíveis as suas recomendações, convenções e requisitos em todas as manifestações escritas, tais como: Pareceres e Laudos Técnicos de Engenharia.<br/><br/>A concepção e apresentação deste Laudo Pericial de Engenharia são de totalresponsabilidade da profissional qualificada, {{ nome_da_representada }}, legalmentehabilitada pelo Conselho Regional de Engenharia e Agronomia da Bahia – CREA de n° {{ crea_da_representada }}, de acordo com a Lei Federal nº 5194/66 e, entre outras, asResoluções nº 205, 218 e 325 do CONFEA e Lei n° 1.121/19.",
+      "data": {
+        "nome_do_laudo": "Técnico de Mapeamento de Fachada",
+        "nome_do_solicitante": "Condomínio Edifício Ville de Lyon",
+        "endereço_do_solicitante": "Rua Riolandia, 467, Santa Monica",
+        "cidade_do_solicitante": "Feira de Santana - BA",
+        "cnpj_do_solicitante": "13.428.332/0001-13",
+        "nome_da_empresa": "L BASTOS ENGENHARIA LTDA",
+        "cnpj_da_empresa": "41.809.972/0001-09",
+        "endereço_da_empresa": "Rua Juracy Magalhães, 853, Ponto Central",
+        "cidade_da_empresa": "Feira de Santana - BA",
+        "titulo_da_representada": "Engenheira Civil",
+        "nome_da_representada": "Lara Geovanna Bastos Nascimento",
+        "cpf_da_representada": "062.275.615-09",
+        "intuito": "verificar as condições da fachada da edição",
+        "periodo_da_vistoria": "fevereiro e março de 2024",
+        "crea_da_representada": "0520105168"
+      }
+    },
+    {
+      "_id": "66e86e96697d53b2137d077b",
+      "isNewPage": false,
+      "isRequired": false,
+      "insertedAt": "2024-09-16T17:44:54.135Z",
+      "name": "ESCOPO",
+      "template": "{{{text}}}",
+      "data": {
+        "text": "O presente trabalho tem por finalidade a realização de uma inspeção técnica da fachada da edificação como um “Check-up”, com o propósito de averiguação e procedimentos técnicos investigativos da Engenharia Diagnóstica, de elementos construtivos, com o objetivo de identificar e relatar as anomalias construtivas e falhas de manutenção que interferem e prejudicam a funcionalidade, suas instalações, seu desempenho, vida útil, análise de risco oferecido aos usuários, patologias e danos físicos existentes no Condomínio Edifício Ville de Lyon, em Feira de Santana - BA, apontando as possíveis causas que deram origem às manifestações, grau de risco e mecanismos de ação.<br/><br/>Neste contexto, é importante frisar que, a anomalia representa a irregularidade relativa à construção e suas instalações, enquanto a falha diz respeito à manutenção, operação e uso da edificação"
+      }
+    }
+  ]
+}
