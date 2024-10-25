@@ -1,0 +1,171 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+  .title {
+    color: blue;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const { jsPDF } = window.jspdf;
+
+    const documentData = {
+      title: "LAUDO TÉCNICO PATOLOGIA DAS CONSTRUÇÕES",
+      author: "Lara Geovanna Bastos Nascimento",
+      location: "Condomínio Maison Ville de Lyon",
+      date: "10/05/2024",
+      topics: [
+        {
+          title: "INTRODUÇÃO",
+          content:
+            "A inspeção de fachada caracteriza-se como uma vistoria para avaliar as manifestações patológicas de uma edificação, onde será rotulado o desempenho, vida útil, segurança, estado de conservação, manutenção, exposição ambiental, utilização e operação...",
+        },
+        {
+          title: `<h2 class="title">CONSIDERAÇÕES INICIAIS<h2>`,
+          content:
+            "O presente laudo Técnico de Mapeamento de Fachada foi solicitado pelo Condomínio Edifício Ville de Lyon, situada na Rua Riolandia, 467, Santa Mônica...",
+        },
+        {
+          title: "ESCOPO",
+          content:
+            "O presente trabalho tem por finalidade a realização de uma inspeção técnica da fachada da edificação como um 'Check-up'...",
+        },
+        {
+          title: "METODOLOGIA E PROCEDIMENTOS",
+          content:
+            "De acordo com a Norma Brasileira Regulamentadora 13752:1996, vistoria é a constatação de um fato através de observação de circunstâncias...",
+        },
+      ],
+    };
+
+    function generatePDF(data) {
+      const doc = new jsPDF("p", "mm", "a4");
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+
+      const marginLeftRight = pageWidth * 0.125;
+      const marginTop = pageHeight * 0.2;
+      const marginBottom = pageHeight * 0.15;
+      const contentHeight = pageHeight - marginTop - marginBottom;
+      let currentY;
+
+      let pageNumber = 0;
+      let toc = [];
+
+      function addPageNumber(num) {
+        if (num) {
+          doc.setFontSize(10);
+          doc.text(`${num}`, pageWidth / 2, pageHeight - 10, {
+            align: "center",
+          });
+          return;
+        }
+
+        if (pageNumber > 1) {
+          doc.setFontSize(10);
+          doc.text(`${pageNumber}`, pageWidth / 2, pageHeight - 10, {
+            align: "center",
+          });
+        }
+      }
+
+      function addWatermark() {
+        doc.setTextColor(150);
+        doc.text("TIMBRE", pageWidth / 2, 10, { align: "center" });
+        doc.setTextColor(0);
+      }
+
+      function addNewPage() {
+        if (pageNumber > 0) {
+          addPageNumber();
+        }
+        doc.addPage();
+        pageNumber++;
+        addWatermark();
+        currentY = marginTop;
+      }
+
+      function addCoverPage() {
+        pageNumber++;
+        currentY = pageHeight / 2;
+        doc.setFontSize(22);
+        doc.html(data.title, {
+          callback: function (doc) {
+            doc.text(data.title, pageWidth / 2, currentY, { align: "center" });
+          },
+        });
+        doc.setFontSize(16);
+        doc.text(data.author, pageWidth / 2, currentY + 10, {
+          align: "center",
+        });
+        doc.text(data.location, pageWidth / 2, currentY + 20, {
+          align: "center",
+        });
+        doc.text(data.date, pageWidth / 2, currentY + 30, { align: "center" });
+      }
+
+      function trackTOC(title) {
+        toc.push({
+          title: title,
+          page: pageNumber,
+        });
+      }
+
+      function generateTOC() {
+        const tocPage = addNewPage(); // Sumário em nova página
+        doc.setFontSize(16);
+        doc.text("SUMÁRIO", marginLeftRight, currentY);
+        currentY += 10;
+
+        doc.setFontSize(12);
+
+        toc.forEach((item) => {
+          doc.text(`${item.title}`, marginLeftRight, currentY);
+          doc.text(`${item.page}`, pageWidth - marginLeftRight, currentY, {
+            align: "right",
+          });
+          currentY += 7;
+
+          if (currentY > pageHeight - marginBottom) {
+            addNewPage();
+          }
+        });
+      }
+
+      function addContent() {
+        data.topics.forEach((topic) => {
+          addNewPage();
+          trackTOC(topic.title); // Rastrear página do tópico
+
+          doc.setFontSize(14);
+          doc.text(topic.title, marginLeftRight, currentY);
+          currentY += 7;
+          doc.setFontSize(12);
+          const textLines = doc.splitTextToSize(
+            topic.content,
+            pageWidth - 2 * marginLeftRight
+          );
+          textLines.forEach((line) => {
+            if (currentY > pageHeight - marginBottom) {
+              addNewPage();
+            }
+            doc.text(line, marginLeftRight, currentY);
+            currentY += 5;
+          });
+        });
+      }
+
+      addCoverPage();
+      addContent();
+      generateTOC();
+
+      addPageNumber(1);
+      doc.movePage(pageNumber, 2);
+
+      doc.save("documento-dinamico.pdf");
+    }
+
+    generatePDF(documentData);
+  });
+</script>

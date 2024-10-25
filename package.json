@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "start:v2": "nodemon server-v2.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "express-handlebars": "^7.1.3",
+    "fs-extra": "^11.2.0",
     "handlebars": "^4.7.8",
     "pdf-lib": "^1.17.1",
     "puppeteer": "^22.13.0"

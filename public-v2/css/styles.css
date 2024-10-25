@@ -1,0 +1,90 @@
+@page {
+  size: A4;
+  margin: 0;
+  counter-increment: page;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  counter-reset: page 1;
+
+  color: blue;
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  page-break-after: always;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  /* Estilos do timbre */
+  background-image: url("timbre.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  /* Estilos do rodapé */
+  text-align: right;
+  padding-right: 10px;
+}
+
+.content {
+  position: absolute;
+  top: 20%;
+  left: 12.5%;
+  width: 75%;
+  height: 65%; /* 100% - 20% (topo) - 15% (inferior) */
+  overflow: visible;
+}
+
+.footer .page-number:after {
+  content: counter(page);
+}
+
+/* Não exibir rodapé na capa */
+.no-footer .footer {
+  display: none;
+}
+
+/* Não exibir cabeçalho na capa, se necessário */
+.no-header .header {
+  display: none;
+}
+
+.topic {
+  page-break-before: always;
+}
+
+/* Garantir que o conteúdo flua para novas páginas se ultrapassar o limite */
+.content p {
+  orphans: 3;
+  widows: 3;
+}
+
+/* Estilos para o sumário */
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin-bottom: 5px;
+}
+
+.toc .subtopics {
+  margin-left: 20px;
+}

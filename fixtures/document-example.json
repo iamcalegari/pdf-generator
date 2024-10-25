@@ -1,0 +1,30 @@
+{
+  "title": "Título do Documento",
+  "subtitle": "Subtítulo do Documento",
+  "topics": [
+    {
+      "id": "topic1",
+      "title": "Introdução",
+      "content": "Conteúdo da introdução...",
+      "subtopics": [
+        {
+          "id": "subtopic1-1",
+          "title": "Objetivo",
+          "content": "Conteúdo do objetivo..."
+        }
+      ]
+    },
+    {
+      "id": "topic2",
+      "title": "Desenvolvimento",
+      "content": "Conteúdo do desenvolvimento...",
+      "subtopics": [
+        {
+          "id": "subtopic2-1",
+          "title": "Detalhes",
+          "content": "Conteúdo dos detalhes..."
+        }
+      ]
+    }
+  ]
+}
