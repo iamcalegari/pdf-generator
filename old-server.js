@@ -13,17 +13,16 @@ const readTemplate = (filePath) => {
 
 // Rota para gerar o PDF
 app.get("/", async (req, res) => {
-  // (async () => {
   const style = readTemplate(
-    path.join(__dirname, "public-v2", "css", "styles.css")
+    path.join(__dirname, "old-public", "css", "styles.css")
   );
 
   const mainTemplate = readTemplate(
-    path.join(__dirname, "views-v3", "layouts", "main.hbs")
+    path.join(__dirname, "old-views-v2", "layouts", "main.hbs")
   );
 
   const bodyTemplate = readTemplate(
-    path.join(__dirname, "views-v3", "pdf-template.hbs")
+    path.join(__dirname, "old-views-v2", "pdf-template.hbs")
   );
 
   // Carrega o template
