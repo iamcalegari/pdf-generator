@@ -79,13 +79,6 @@ ul-2 {
   padding: 0;
   line-height: 1.22;
 }
-.page-footer {
-  font-size: 12pt;
-  text-align: end;
-  width: 88%;
-  position: absolute;
-  bottom: 60px;
-}
 
 .page-wrapper {
   margin: 0 auto;
